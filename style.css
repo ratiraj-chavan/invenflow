@@ -1,9 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 20px;
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", Century;
+    background: url('img/bg.jpg') center/cover no-repeat;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .container {
     max-width: 400px;
@@ -38,24 +44,17 @@ button:hover, .btn:hover {
     background: rgb(34, 155, 169);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+/* Contact Form Styling */
+.contact-container {
 
-li {
-    background: #ddd;
-    padding: 10px;
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-li button {
-    background: red;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-    color: white;
+   background: url('img/bg.jpg') center/cover no-repeat;
+    padding: 30px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: absolute;
+    top: 50%; /* Adjust this value to move it slightly down */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -46,8 +46,6 @@ button:hover, .btn:hover {
 
 /* Contact Form Styling */
 .contact-container {
-
-   background: url('img/bg.jpg') center/cover no-repeat;
     padding: 30px;
     width: 100%;
     max-width: 350px;

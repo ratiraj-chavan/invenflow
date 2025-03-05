@@ -29,14 +29,6 @@
             width: 80%;
             margin: 0 auto;
         }
-        .btn-group {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-delete {
-            margin-left: 15px;
-        }
         .header {
             font-size: 28px;
             font-weight: bold;
@@ -58,10 +50,20 @@
         .home-btn:hover {
             background: #0033cc;
         }
+        .btn-delete {
+            margin-top: 20px; /* Adding space between -/+ buttons and Delete button */
+        }
+        /* Modify button group to align buttons next to each other */
+        .btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
     </style>
 </head>
 <body class="bg-light">
-    <button onclick="logout()">Logout</button>
+    
     <div class="main-container">
         <h1 class="text-center text-primary">Real-Time Inventory Auditing System</h1>
 
@@ -101,7 +103,8 @@
         <br>
 
         <!-- Home Button -->
-        <button class="home-btn" onclick="goHome()">🏠 Home</button>
+       <a href="../home/home.html"> <button class="home-btn" onclick="goHome()">Home</button><br>
+        <button onclick="logout()">Logout</button>
     </div>
 
     <script type="module" src="../script.js"></script>
@@ -128,7 +131,7 @@
 
         console.log("🔥 Firebase Initialized:", app);
         console.log("🔗 Database Reference:", database);
-        
+
         // Handle Inventory Management
         function addItem() {
             let itemName = document.getElementById("itemName").value;
@@ -158,30 +161,29 @@
         }
 
         function loadInventory() {
-            let table = document.getElementById("inventory-tbody");
-            table.innerHTML = ""; // Clear existing inventory
+    let table = document.getElementById("inventory-tbody");
+    table.innerHTML = ""; // Clear existing inventory
 
-            // Load inventory from Firestore
-            db.collection("inventory").get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    let row = table.insertRow();
-                    row.innerHTML = `
-                        <td>${doc.data().name}</td>
-                        <td class="quantity">${doc.data().quantity}</td>
-                        <td>${doc.data().location}</td>
-                        <td>
-                            <div class="btn-group">
-                                <button class="btn btn-danger btn-sm" onclick="decreaseQuantity(this, '${doc.id}')">-</button>
-                                <button class="btn btn-success btn-sm" onclick="increaseQuantity(this, '${doc.id}')">+</button>
-                                <button class="btn btn-warning btn-sm btn-delete" onclick="deleteRow(this, '${doc.id}')">Delete</button>
-                            </div>
-                        </td>
-                    `;
-                });
-            }).catch((error) => {
-                console.log("Error getting documents: ", error);
-            });
-        }
+    db.collection("inventory").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            let row = table.insertRow();
+            row.innerHTML = `
+                <td>${doc.data().name}</td>
+                <td class="quantity">${doc.data().quantity}</td>
+                <td>${doc.data().location}</td>
+                <td>
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                       <div> <button class="btn btn-success btn-sm" onclick="increaseQuantity(this, '${doc.id}')">+</button> </div>
+                        <div><button class="btn btn-warning btn-sm" onclick="decreaseQuantity(this, '${doc.id}')">-</button></div>
+                       <div> <button class="btn btn-danger btn-sm" onclick="deleteRow(this, '${doc.id}')">Delete</button></div>
+                    </div>
+                </td>
+            `;
+        });
+    }).catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+}
 
         function increaseQuantity(button, docId) {
             let row = button.closest("tr");

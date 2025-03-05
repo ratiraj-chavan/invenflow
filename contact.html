@@ -10,7 +10,7 @@
         /* Background */
         body {
             font-family: Arial, sans-serif;
-            background: #f8f9fa;
+            background: linear-gradient(to right, #eef2ff, #c7d2fe);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -28,6 +28,9 @@
             border-radius: 15px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 1);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Form Inputs */
@@ -42,7 +45,7 @@
         }
 
         /* Buttons */
-        .contact-container button, .home-button {
+        .contact-container button {
             width: 100%;
             background: #0047FF;
             color: white;
@@ -56,17 +59,30 @@
             margin-top: 10px;
         }
 
-        .contact-container button:hover, .home-button:hover {
+        .contact-container button:hover {
             background: #0037cc;
         }
 
         /* Home Button */
         .home-button {
-            max-width: 400px;
+            width: 100%;
+            background: #28a745;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
-            margin-top: 15px;
             text-decoration: none;
             display: inline-block;
+            margin-top: 15px;
+        }
+
+        .home-button:hover {
+            background: #218838;
         }
     </style>
 </head>
@@ -89,10 +105,10 @@
             
             <button type="submit">Send Message</button> 
         </form>
+
+        <!-- Home Button at Bottom -->
+        <a href="home/home.html" class="home-button">Go to Home</a>
     </div>
-<br><br><br><br><br><br>
-    <!-- Home Button Below the Contact Form -->
-    <a href="home/home.html" class="home-button">Go to Home</a>
 
     <script type="module" src="contact.js"></script>
     <script type="module">

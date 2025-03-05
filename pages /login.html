@@ -228,39 +228,35 @@
 
     <div class="container">
         <div class="form-box login">
-            <form action="#">
+            <form onsubmit="event.preventDefault(); login();">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required>
+                    <input type="email" id="loginEmail" placeholder="Email" required>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="forgot-link">
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button onclick="login()" type="submit" class="btn">Login</button>
+                <button type="submit" class="btn">Login</button>
             </form>
         </div>
 
         <div class="form-box register">
-            <form action="#">
+            <form onsubmit="event.preventDefault(); signup();">
                 <h1>Registration</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" id="signupEmail" placeholder="Email" required>
                     <i class='bx bxs-envelope'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
-                <button onclick="signup()" type="submit" class="btn">Register</button>
+                <button type="submit" class="btn">Register</button>
             </form>
         </div>
 
@@ -289,6 +285,6 @@
             container.classList.remove('active');
         });
     </script>
-    <script type="module" src="../script.js"></script>
+   <script type="module" src="../script.js"></script>
 </body>
 </html>

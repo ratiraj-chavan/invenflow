@@ -141,7 +141,18 @@
             if (!itemName || itemQuantity <= 0 || !itemLocation) {
                 alert("Please enter valid details");
                 return;
-            }
+            }if (itemName === "") {
+        alert("Item name cannot be empty or start with spaces!");
+        return;
+    }
+    if (!/^\d+$/.test(itemQuantity) || parseInt(itemQuantity) <= 0) {
+        alert("Quantity must be a valid positive number!");
+        return;
+    }
+    if (itemLocation === "") {
+        alert("Location cannot be blank!");
+        return;
+    }
 
             // Add item to Firestore database
             db.collection("inventory").add({

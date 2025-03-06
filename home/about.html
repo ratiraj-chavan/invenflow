@@ -1,49 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-     <title>Real time inventory Auditing system </title>
+    <title>Real-Time Inventory Auditing System</title>
     <link rel="shortcut icon" href="assets/images/site_logo/site_logo.png">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            background: linear-gradient(to right, #eef2ff, #c7d2fe);
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
         h1 {
             color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            font-size: 22px;
+            margin-bottom: 15px;
         }
         p {
-            color: #555;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .cta {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s ease-in-out;
+        }
+        .cta:hover {
+            background: #0056b3;
+        }
+        .home-btn {
+            text-align: center;
+            margin-top: 20px;
+            background: #0047FF;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            padding-left: 10px;
+        }
+        .home-btn:hover {
+            background: #0033cc;
         }
     </style>
 </head>
 <body>
     <div class="container">
-      <h1>About Us</h1>
-      <h1>🚀 Real-time accuracy. Smarter inventory.</h1>
-       inventory specializes in real-time inventory auditing, ensuring accurate, automated, and efficient stock management. With IoT, AI, and cloud technology, we help businesses optimize inventory, reduce losses, and make smarter decisions.
-      <p>
-        
-        <h1>🚀 Optimize your inventory with precision and speed!</h1>
-        At  inventory, we offer a real-time inventory auditing system designed for accuracy, efficiency, and seamless automation. Our technology eliminates manual errors, provides live tracking, and integrates effortlessly with existing ERP systems. With AI-driven insights, automated alerts, and predictive analytics, businesses can optimize stock levels, reduce losses, and improve decision-making. Whether you're a small business or a large enterprise, our scalable and reliable solution ensures you stay ahead with smarter inventory management.
+        <div class="icon">🚀</div>
+        <h1>Real-Time Accuracy. Smarter Inventory.</h1>
+        <h2>Your Trusted Partner in <span class="highlight">Real-Time Inventory Auditing</span></h2>
+        <p>
+            We specialize in real-time inventory auditing, ensuring <span class="highlight">accuracy, automation, and efficiency</span> in stock management. 
+            Powered by <span class="highlight">IoT, AI, and cloud technology</span>, our system helps businesses optimize inventory, 
+            reduce losses, and make smarter data-driven decisions.
+        </p>
 
-
+        <h2>🔍 Optimize Your Inventory with <span class="highlight">Precision and Speed</span></h2>
+        <p>
+            Our real-time inventory auditing system eliminates manual errors, provides live tracking, and integrates seamlessly with existing ERP systems. 
+            With <span class="highlight">AI-driven insights, automated alerts, and predictive analytics</span>, businesses can:
+        </p>
+        <ul style="text-align: left; display: inline-block;">
+            <li>✅ Monitor stock levels in real time</li>
+            <li>✅ Reduce losses with automated alerts</li>
+            <li>✅ Improve decision-making with predictive analytics</li>
+            <li>✅ Enhance operational efficiency with seamless ERP integration</li>
+        </ul>
         
-      </p>  </p>
+        <p>
+            Whether you're a small business or a large enterprise, our <span class="highlight">scalable and reliable</span> solution ensures 
+            you stay ahead in inventory management.
+        </p>
+        <a href="home.html"> <button class="home-btn" onclick="goHome()">Home</button><br>
     </div>
 </body>
 </html>

@@ -1,65 +1,4 @@
-/* Table Of Content - start
-================================================== */
 
-/* 
-* Project Name   :  RankUpFast - SEO and Digital Marketing Agency Site Template
-* File           :  CSS Base
-* Version        :  1.0.0
-* Last change    :  Saturday, May 18, 2024
-* Author         :  Web Thunder (https://themeforest.net/user/web-thunder/portfolio)
-* Developer			 :	webrok (https://www.fiverr.com/webrok?up_rollout=true)
-
-==================================================
-
-1 - Template Global Settings
-* - 1.1 - Template Fonts
-* - 1.2 - Template Reset
-
-2 - Template Elements
-* - 2.01 - CSS Animation
-* - 2.02 - Backtotop Button
-* - 2.03 - Spacing and Gaps
-* - 2.04 - Order and Unordered
-* - 2.05 - Button Style
-* - 2.06 - Filter Elements Nav
-* - 2.07 - Typography
-* - 2.08 - Slider and Carousel
-* - 2.09 - Form
-* - 2.10 - Social Icons
-* - 2.11 - Counter
-* - 2.12 - Accordion
-* - 2.13 - Pagination Nav
-
-3 - Template Parts
-* - 3.01 - Site Header
-* - 3.02 - Site Footer
-* - 3.03 - Page Header, Page Banner, Breadcrumb
-* - 3.04 - Sidebar
-
-4 - Template Components
-* - 4.01 - Hero Section
-* - 4.02 - Service
-* - 4.03 - About
-* - 4.04 - Case Study
-* - 4.05 - Team
-* - 4.06 - Review
-* - 4.07 - Blog
-* - 4.08 - Clients
-* - 4.09 - Pricing
-* - 4.10 - Policy
-* - 4.11 - Comment
-
-5 - Template Pages
-* - 5.01 - About Page
-* - 5.01 - All Details Pages
-* - 5.01 - Contact Page
-* - 5.01 - Dictionary Page
-* - 5.01 - Career Page
-
-*/
-
-/* Table Of Content - end
-================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root,
@@ -1704,7 +1643,7 @@ input[type=file]:active::before {
 }
 
 .site_header .site_logo .site_link {
-    max-width: 180px;
+    max-width: 260px;
 }
 
 .site_header .register_btn {

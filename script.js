@@ -148,15 +148,17 @@ function loadUserInventory(userId) {
 
             row.innerHTML = `
                 <td>${item.name}</td>
-                <td>
-                    <button class="btn btn-sm btn-success" onclick="increaseQuantity('${userId}', '${itemId}', ${item.quantity}, '${item.name}', '${item.location}')">+</button>
-                    ${item.quantity}
-                    <button class="btn btn-sm btn-warning" onclick="decreaseQuantity('${userId}', '${itemId}', ${item.quantity}, '${item.name}', '${item.location}')">-</button>
-                </td>
+                <td class="quantity">${item.quantity}</td>
                 <td>${item.location}</td>
-                <td>
+                <td><br>
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <button class="btn btn-success btn-sm" onclick="increaseQuantity('${userId}', '${itemId}', ${item.quantity}, '${item.name}', '${item.location}')">+</button>
+                        <button class="btn btn-warning btn-sm" onclick="decreaseQuantity('${userId}', '${itemId}', ${item.quantity}, '${item.name}', '${item.location}')">-</button>
+                    </div> <br>
+                
                     <button class="btn btn-danger btn-sm" onclick="deleteItem('${userId}', '${itemId}')">Delete</button>
                 </td>
+
             `;
             inventoryTable.appendChild(row);
         });
